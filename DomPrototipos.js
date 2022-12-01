@@ -379,12 +379,6 @@ DomElement.prototype.viewStyleHierarchy = function (indent) {
   return result;
 };
 
-console.log(
-  Object.keys(styles).sort(function (sel1, sel2) {
-    return sel1.trim().split(/\s+/).length - sel2.trim().split(/\s+/).length;
-  })
-);
-console.log(dom.getElementsBySelector("body section"));
 dom.addStyles(styles);
 console.log(dom.viewStyleHierarchy());
 
@@ -473,8 +467,6 @@ DomElement.prototype.bubblingUpHandle = function (eventName) {
   var proto = Object.getPrototypeOf(this);
   if ((!event || event.handler.bind(this)()) && proto.events) {
     proto.bubblingUpHandle(eventName);
-  } else {
-    console.log("No hay evento asociado");
   }
 };
 
@@ -670,7 +662,3 @@ for (let index = 0; index < ps.length; index++) {
 }
 
 dom.display();
-
-dom.children[1].children[0].children[0].display();
-
-console.log(dom.children[0]);

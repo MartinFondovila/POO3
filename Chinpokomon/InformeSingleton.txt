@@ -1,0 +1,10 @@
+Informe de patrones de diseño JAVA
+Para la resolución del punto 2 se decidio utilizar el patron de diseño Singleton, ya que las caracteristicas del mismo
+cumplian con los requerimientos pedidos, una clase que solo puede ser instanciada una vez y se puede acceder desde cualquier otra parte 
+del código. Como información adicional sobre la implementacion del Logger Sigleton, se realiza la instanciación del mismo de forma lazy, es decir, 
+que solo se intancia una vez llamado al metodo getIntance() de la clase y no durante el tiempo de carga de las clases, otro detalle es que la clase
+Logger funciona de forma correcta en entornos donde hay solo un hilo y dado que hasta el momento no parece ser necesaria la utilización de más de un hilo se 
+va a mantener de esta manera.
+
+En el caso de python el patron quedo se implemento con metaclass, por lo demas la logica y los levels (Enum) estan practicamente igual quitando las diferencias
+por la sintaxis
